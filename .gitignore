@@ -13,3 +13,4 @@ _ide_helper.php
 composer.lock
 yarn.lock
 config/debugbar.php
+storage/debugbar/
