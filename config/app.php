@@ -178,6 +178,7 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
+        Scool\Curriculum\Providers\CurriculumServiceProvider::class,
 
         /*
          * Application Service Providers...
