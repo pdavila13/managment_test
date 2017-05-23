@@ -15,6 +15,7 @@ require('bootstrap-less')
 require('admin-lte')
 window.toastr = require('toastr')
 require('icheck')
+require('sweetalert');
 
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces
@@ -47,6 +48,8 @@ Vue.component('register-form', require('./components/auth/RegisterForm.vue'))
 Vue.component('login-form', require('./components/auth/LoginForm.vue'))
 Vue.component('email-reset-password-form', require('./components/auth/EmailResetPasswordForm.vue'))
 Vue.component('reset-password-form', require('./components/auth/ResetPasswordForm.vue'))
+
+Vue.component('studies', require('./components/studies/studies.vue'));
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
