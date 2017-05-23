@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Scool\Curriculum\Database\Seeds\CurriculumSeeder;
+use Scool\Curriculum\Database\Seeds\LawsTableSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,5 +15,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(AdminUserSeeder::class);
         $this->call(CurriculumSeeder::class);
+        $this->call(LawsTableSeeder::class);
     }
 }
