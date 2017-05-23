@@ -49,7 +49,7 @@ Vue.component('login-form', require('./components/auth/LoginForm.vue'))
 Vue.component('email-reset-password-form', require('./components/auth/EmailResetPasswordForm.vue'))
 Vue.component('reset-password-form', require('./components/auth/ResetPasswordForm.vue'))
 
-Vue.component('studies', require('./components/studies/studies.vue'));
+Vue.component('studies', require('./components/studies/Studies.vue'));
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
