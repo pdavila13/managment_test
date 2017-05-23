@@ -32,10 +32,10 @@ window.Vue = require('vue')
 
 window.axios = require('axios')
 
-window.axios.defaults.headers.common = {
-  'X-CSRF-TOKEN': window.Laravel.csrfToken,
-  'X-Requested-With': 'XMLHttpRequest'
-}
+// window.axios.defaults.headers.common = {
+//   'X-CSRF-TOKEN': window.Laravel.csrfToken,
+//   'X-Requested-With': 'XMLHttpRequest'
+// }
 
 // Use trans function in Vue (equivalent to trans() Laravel Translations helper). See htmlheader.balde.php partial.
 Vue.prototype.trans = (key) => {
