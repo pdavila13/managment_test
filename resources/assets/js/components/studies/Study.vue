@@ -70,7 +70,7 @@ export default {
       return this.fetchPage(pageNum)
     },
     editStudyNameToAPI: function() {
-      axios.put('/api/v1/study/' + this.study.id, {
+      axios.put('api/v1/studies' + this.study.id, {
         name: this.study.name,
       }).then((response) => {
         console.log('Name of study ' + this.study.id + ' updated succesfully! Now is known ad \"' + this.study.name + '\".')
@@ -85,7 +85,7 @@ export default {
       return this.fetchPage(pageNum)
     },
     editStudyStateToApi: function (doneStatus) {
-      axios.put('/api/v1/study/' + this.study.id, {
+      axios.put('/api/v1/studies/' + this.study.id, {
         state: doneStatus,
       }).then((response) => {
         console.log('State of study ' + this.study.id + ' updated succesfully! Now has \"' + doneStatus + '\".')

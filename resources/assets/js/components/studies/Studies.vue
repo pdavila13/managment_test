@@ -45,14 +45,14 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <todo v-for="(study, index) in filteredStudies"
-                          v-bind:todo="study"
+                    <study v-for="(study, index) in filteredStudies"
+                          v-bind:study="study"
                           v-bind:index="index"
                           v-bind:from="from"
                           v-bind:page="page"
                           v-bind:fetchPage="fetchPage"
-                          @todo-deleted="deleteStudy">
-                    </todo>
+                          @study-deleted="deleteStudy">
+                    </study>
                     </tbody>
 
                 </table>
@@ -118,7 +118,7 @@ export default {
   },
   methods: {
     getStudyId: function (index) {
-      axios.get('/api/v1/study').then((response) => {
+      axios.get('/api/v1/studies').then((response) => {
         var studies = this.studies = response.data.data
         this.id = studies[index].id
       }, (response) => {
@@ -153,7 +153,7 @@ export default {
       return this.fetchPage(1)
     },
     addStudyToApi: function (study) {
-      axios.post('/api/v1/sutdy', {
+      axios.post('/api/v1/studies', {
         name: study.name,
         state: study.state,
         user_id: study.user_id,
@@ -166,7 +166,7 @@ export default {
       this.fetchPage(this.page)
     },
     fetchPage: function (page) {
-      axios.get('/api/v1/sutdy?page=' +  page).then((response) => {
+      axios.get('/api/v1/studies?page=' +  page).then((response) => {
         console.log(response)
         this.studies = response.data.data
         this.perPage = response.data.per_page
@@ -195,7 +195,7 @@ export default {
       })
     },
     deleteStudyFromApi: function(id) {
-      axios.delete('/api/v1/study/' + id).then((response) => {
+      axios.delete('/api/v1/studies/' + id).then((response) => {
         console.log('Study ' + id + ' deleted succesfully!')
       }, (response) => {
         sweetAlert("Oops...", "Something went wrong!", "error")
