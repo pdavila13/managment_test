@@ -38,7 +38,20 @@ mix.js('resources/assets/js/app.js', 'public/js')
    .copy('node_modules/admin-lte/dist/img','public/img')
    .copy('node_modules/admin-lte/plugins','public/plugins')
    .copy('node_modules/icheck/skins/square/blue.png','public/css')
-   .copy('node_modules/icheck/skins/square/blue@2x.png','public/css');
+   .copy('node_modules/icheck/skins/square/blue@2x.png','public/css')
+   .copy('resources/assets/css/animate.min.css', 'public/css')
+   .copy('resources/assets/css/bootstrap.min.css', 'public/css')
+   .copy('resources/assets/css/font-awesome.min.css', 'public/css')
+   .copy('resources/assets/css/templatemo-style.css', 'public/css')
+   .copy('resources/assets/js/bootstrap.min.js', 'public/js')
+   .copy('resources/assets/js/custom.js', 'public/js')
+   .copy('resources/assets/js/jquery.js', 'public/js')
+   .copy('resources/assets/js/jquery.singlePageNav.min.js', 'public/js')
+   .copy('resources/assets/js/wow.min.js', 'public/js')
+   .copy('resources/assets/fonts/*.*','public/fonts/')
+   .copy('resources/assets/images/home-bg.jpg','public/images')
+   .copy('resources/assets/images/contact-bg.jpg','public/images')
+   .copy('resources/assets/images/software-img.png','public/images');
 
 if (mix.config.inProduction) {
   mix.version();
